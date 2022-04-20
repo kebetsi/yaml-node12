@@ -76,20 +76,20 @@ export class YAMLMap<K = unknown, V = unknown> extends Collection {
     }
   }
 
-  delete(key: K) {
+  delete(key: unknown) {
     const it = findPair(this.items, key)
     if (!it) return false
     const del = this.items.splice(this.items.indexOf(it), 1)
     return del.length > 0
   }
 
-  get(key: K, keepScalar?: boolean) {
+  get(key: unknown, keepScalar?: boolean) {
     const it = findPair(this.items, key)
     const node = it?.value
     return !keepScalar && isScalar(node) ? node.value : node
   }
 
-  has(key: K) {
+  has(key: unknown) {
     return !!findPair(this.items, key)
   }
 

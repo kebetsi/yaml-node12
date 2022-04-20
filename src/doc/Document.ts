@@ -264,7 +264,7 @@ export class Document<T = unknown> {
    * Removes a value from the document.
    * @returns `true` if the item was found and removed.
    */
-  delete(key: any) {
+  delete(key: unknown) {
     return assertCollection(this.contents) ? this.contents.delete(key) : false
   }
 
