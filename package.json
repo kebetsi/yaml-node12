@@ -1,10 +1,11 @@
 {
-  "name": "yaml",
-  "version": "2.1.1",
+  "name": "yaml-node12",
+  "version": "1.0.0",
   "license": "ISC",
   "author": "Eemeli Aro <eemeli@gmail.com>",
-  "repository": "github:eemeli/yaml",
-  "description": "JavaScript parser and stringifier for YAML",
+  "contributors": ["Ilia Kebets <kebetsi@gmail.com>"],
+  "repository": "github:kebetsi/yaml-node12",
+  "description": "Node 12 compatible fork of eemeli' yaml (parser)",
   "keywords": [
     "YAML",
     "parser",
@@ -12,7 +13,6 @@
   ],
   "homepage": "https://eemeli.org/yaml/",
   "files": [
-    "browser/",
     "dist/",
     "util.d.ts",
     "util.js"
@@ -36,9 +36,7 @@
     }
   },
   "scripts": {
-    "build": "npm run build:node && npm run build:browser",
-    "build:browser": "rollup -c config/rollup.browser-config.js",
-    "build:node": "rollup -c config/rollup.node-config.js",
+    "build": "rollup -c config/rollup.node-config.js",
     "clean": "git clean -fdxe node_modules",
     "lint": "eslint src/",
     "prettier": "prettier --write .",

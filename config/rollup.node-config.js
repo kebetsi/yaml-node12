@@ -12,6 +12,10 @@ export default {
     esModule: false,
     preserveModules: true
   },
-  plugins: [typescript()],
+  // inspired from https://stackoverflow.com/a/59787575
+  plugins: [typescript({compilerOptions: {
+    lib: ['es2020'],
+    target: 'es2019'
+  }})],
   treeshake: { moduleSideEffects: false, propertyReadSideEffects: false }
 }
