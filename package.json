@@ -51,8 +51,7 @@
     "docs:install": "cd docs-slate && bundle install",
     "docs:deploy": "cd docs-slate && ./deploy.sh",
     "docs": "cd docs-slate && bundle exec middleman server",
-    "preversion": "npm test && npm run build",
-    "prepublishOnly": "npm run clean && npm test && npm run build"
+    "preversion": "npm test && npm run build"
   },
   "browserslist": "defaults, not ie 11",
   "prettier": {
